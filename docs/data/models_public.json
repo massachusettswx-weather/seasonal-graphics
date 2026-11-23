@@ -1623,6 +1623,21 @@
     "file": "assets/polar/polar_sectors_gefsv12.png?v=20261122041415",
     "caption": "North Pacific and North Atlantic (60-90N) geopotential height anomaly - NOAA GEFSv12."
    }
+  },
+  {
+   "id": "ec46",
+   "name": "ECMWF EC46",
+   "note": "ECMWF sub-seasonal ensemble (EC46) \u00b7 101 members \u00b7 a daily run with a 48-hour delay \u00b7 the whole 46-day extended range, so this section covers the run to its end rather than whole seasons. The polar-cap geopotential height is read from ECMWF's own climate store, which carries ten pressure levels rather than the twelve the seasonal archive carries.",
+   "members": 101,
+   "init": "2026-11-20",
+   "polar": {
+    "file": "assets/polar/polar_cap_ec46.png?v=20261123010543",
+    "caption": "Polar cap (60-90N) geopotential height anomaly - ECMWF EC46.",
+    "ok": true
+   },
+   "snow_ok": false,
+   "spv_ok": false,
+   "polar_ok": true
   }
  ]
 }
