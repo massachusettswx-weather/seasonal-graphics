@@ -5,13 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Model &middot; Seasonal Forecast Graphics</title>
 <link rel="canonical" href="https://massachusettswx-weather.github.io/seasonal-graphics/model.html">
-<link rel="stylesheet" href="assets/css/style.css?v=20261115224950">
+<link rel="stylesheet" href="assets/css/style.css?v=20261123010545">
+<script>
+/* the theme is read back before anything is drawn, so a dark screen never
+   flashes white */
+(function(){
+  try{var t=localStorage.getItem('theme');
+    if(t){document.documentElement.setAttribute('data-theme',t);}}catch(e){}
+})();
+</script>
 </head>
 <body>
 <header class="top">
   <h1><a href="https://massachusettswx-weather.github.io/seasonal-graphics/">Seasonal Forecast Graphics</a></h1>
   <span class="sub">ECMWF SEAS5 &amp; C3S seasonal systems &middot; November 2026 init</span>
   <span class="spacer"></span>
+  <button class="themebtn" id="themebtn" type="button">Dark</button>
   <a href="https://github.com/massachusettswx-weather/seasonal-graphics" target="_blank"
      rel="noopener">GitHub</a>
 </header>
@@ -100,5 +109,22 @@ sel.addEventListener('change',render);
 render();
 </script>
 </div>
+<script>
+(function(){
+  var b=document.getElementById('themebtn'); if(!b){return;}
+  function label(){
+    var t=document.documentElement.getAttribute('data-theme');
+    b.textContent=(t==='dark')?'Light':'Dark';
+  }
+  label();
+  b.addEventListener('click',function(){
+    var t=document.documentElement.getAttribute('data-theme');
+    t=(t==='dark')?'light':'dark';
+    document.documentElement.setAttribute('data-theme',t);
+    try{localStorage.setItem('theme',t);}catch(e){}
+    label();
+  });
+})();
+</script>
 </body>
 </html>

@@ -108,3 +108,34 @@ tr:last-child td{border-bottom:none}
 footer{border-top:1px solid var(--line); margin-top:26px; padding:16px 0 0;
   color:var(--muted); font-size:12.5px; display:flex; justify-content:space-between}
 a{color:#1c4b8a}
+
+/* DARK MODE (asked for on 17 Nov 2026).  The theme is a data-theme on the
+   html element: the button in the header sets it, the browser remembers
+   it, and the first thing the page does is read it back, so there is no
+   white flash on a dark screen. */
+:root[data-theme="dark"]{
+  --ink:#e7eef6; --muted:#96a6b8; --line:#25313f; --bg:#0a1017;
+  --card:#121b25; --accent:#12263f; --accent2:#e2600f;
+}
+:root[data-theme="dark"] nav.tabs{background:#0e1620}
+:root[data-theme="dark"] .tag{background:#1a2431; color:#b8c6d5; border-color:#2a3644}
+:root[data-theme="dark"] .tag.ok{background:#15311f; color:#82d3a3; border-color:#255033}
+:root[data-theme="dark"] .tag.no{background:#2d1a16; color:#e79c87; border-color:#4c2b23}
+:root[data-theme="dark"] a.btn{background:#1a2431; color:#dbe7f3; border-color:#2a3644}
+:root[data-theme="dark"] a.btn:hover{background:#243244}
+:root[data-theme="dark"] a.btn.primary{background:#1d4f7a; border-color:#1d4f7a}
+:root[data-theme="dark"] button.ctrl.ghost{background:#1a2431; color:#cfe0f5}
+:root[data-theme="dark"] .seg .segbtn.ghost{background:#1a2431; color:#cfe0f5}
+:root[data-theme="dark"] .seg .segbtn.on{background:#1d4f7a; border-color:#1d4f7a}
+:root[data-theme="dark"] select.ctrl{background:#1a2431; color:#e7eef6; border-color:#2a3644}
+:root[data-theme="dark"] table th{background:#1a2431; color:#c3d0dd}
+:root[data-theme="dark"] .var .thumb{background:#1a2431}
+:root[data-theme="dark"] .maptimeline .tlbtn{background:#1a2431; color:#dbe6f2; border-color:#2a3644}
+:root[data-theme="dark"] .maptimeline .tlbtn.on{background:#1d4f7a; color:#fff; border-color:#1d4f7a}
+:root[data-theme="dark"] .mapviews button{background:#1a2431; color:#dbe7f3}
+:root[data-theme="dark"] .mapviews button.active{background:#1d4f7a; border-color:#1d4f7a}
+:root[data-theme="dark"] .maplegend .bar{border-color:#2a3644}
+.themebtn{font:inherit; font-size:12.5px; padding:5px 13px; cursor:pointer;
+  border:1px solid rgba(207,224,245,.4); background:transparent; color:#cfe0f5;
+  border-radius:999px; margin-right:2px}
+.themebtn:hover{background:rgba(207,224,245,.14)}
