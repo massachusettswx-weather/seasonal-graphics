@@ -1629,14 +1629,14 @@
    "name": "ECMWF EC46",
    "note": "ECMWF sub-seasonal ensemble (EC46) \u00b7 101 members \u00b7 a daily run with a 48-hour delay \u00b7 the whole 46-day extended range, so this section covers the run to its end rather than whole seasons. The polar-cap geopotential height is read from ECMWF's own climate store, which carries ten pressure levels rather than the twelve the seasonal archive carries.",
    "members": 101,
-   "init": "2026-11-22",
+   "init": "2026-11-25",
    "polar": {
-    "file": "assets/polar/polar_cap_ec46.png?v=20261124192248",
+    "file": "assets/polar/polar_cap_ec46.png?v=20261127015327",
     "caption": "Polar cap (60-90N) geopotential height anomaly - ECMWF EC46.",
     "ok": true
    },
    "polar_sectors": {
-    "file": "assets/polar/polar_sectors_ec46.png?v=20261124191918",
+    "file": "assets/polar/polar_sectors_ec46.png?v=20261127015316",
     "caption": "North Pacific and North Atlantic (60-90N) geopotential height anomaly - ECMWF EC46."
    },
    "snow_ok": false,
